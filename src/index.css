@@ -11,26 +11,17 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom Green Palette Variables */
+/* Dark Green Theme Variables */
 :root {
-  --feldgrau: #3F4B3B;
-  --hunter-green: #44633F;
-  --sea-green: #5A9367;
-  --mint: #5CAB7D;
-  --mint-green: #DDFFF7;
-  
-  /* Derived colors for depth */
-  --feldgrau-light: #4a5546;
-  --feldgrau-dark: #2d3328;
-  --hunter-light: #52754b;
-  --hunter-dark: #3a5235;
-  --sea-light: #6ba575;
-  --sea-dark: #4d7f58;
-  --mint-light: #6fb587;
-  --mint-dark: #4f966e;
+  --primary-green: #10b981;
+  --dark-green: #047857;
+  --light-green: #34d399;
+  --emerald: #059669;
+  --teal: #0d9488;
+  --forest: #065f46;
 }
 
-/* Enhanced Custom Animations for Custom Green Theme */
+/* Enhanced Custom Animations for Dark Green Theme */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -84,7 +75,7 @@ html {
   }
 }
 
-/* Custom green gradient animation */
+/* Green gradient animation */
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -97,7 +88,19 @@ html {
   }
 }
 
-/* Typewriter effect with custom green cursor */
+/* Matrix-style rain effect */
+@keyframes matrixRain {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Typewriter effect with green cursor */
 @keyframes typewriter {
   from {
     width: 0;
@@ -112,17 +115,17 @@ html {
     border-color: transparent;
   }
   51%, 100% {
-    border-color: #5CAB7D;
+    border-color: #10b981;
   }
 }
 
-/* Custom green glow effect */
+/* Green glow effect */
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(92, 171, 125, 0.5);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
   }
   50% {
-    box-shadow: 0 0 40px rgba(92, 171, 125, 0.8), 0 0 60px rgba(90, 147, 103, 0.6);
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.8), 0 0 60px rgba(52, 211, 153, 0.6);
   }
 }
 
@@ -160,6 +163,16 @@ html {
   }
 }
 
+/* Rotate animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Scale animation */
 @keyframes scaleIn {
   from {
@@ -172,7 +185,7 @@ html {
   }
 }
 
-/* Custom green shimmer effect */
+/* Green shimmer effect */
 @keyframes shimmer {
   0% {
     background-position: -200px 0;
@@ -182,7 +195,7 @@ html {
   }
 }
 
-/* Wave animation */
+/* Green wave animation */
 @keyframes wave {
   0%, 100% {
     transform: rotate(0deg);
@@ -233,15 +246,23 @@ html {
   animation: slideInUp 0.8s ease-out;
 }
 
+.animate-rotate {
+  animation: rotate 20s linear infinite;
+}
+
 .animate-scale-in {
   animation: scaleIn 0.6s ease-out;
+}
+
+.animate-matrix-rain {
+  animation: matrixRain 3s linear infinite;
 }
 
 .animate-wave {
   animation: wave 2s ease-in-out infinite;
 }
 
-/* Typewriter effect with custom green theme */
+/* Typewriter effect with green theme */
 .typewriter {
   overflow: hidden;
   white-space: nowrap;
@@ -292,22 +313,30 @@ html {
   transform: scale(1.1);
 }
 
-/* Custom Green Glass morphism effect */
+.hover\:rotate-3:hover {
+  transform: rotate(3deg);
+}
+
+.hover\:-rotate-3:hover {
+  transform: rotate(-3deg);
+}
+
+/* Green Glass morphism effect */
 .glass {
-  background: rgba(92, 171, 125, 0.1);
+  background: rgba(16, 185, 129, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(92, 171, 125, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .glass-dark {
-  background: rgba(63, 75, 59, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(92, 171, 125, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.1);
 }
 
-/* Custom green gradient text */
+/* Green gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #5CAB7D, #5A9367, #44633F);
+  background: linear-gradient(135deg, #10b981, #34d399, #059669);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -318,73 +347,90 @@ html {
 /* Grid pattern background */
 .bg-grid-pattern {
   background-image: 
-    linear-gradient(rgba(92, 171, 125, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(92, 171, 125, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
-/* Custom scrollbar with your green theme */
+/* Custom scrollbar with green theme */
 ::-webkit-scrollbar {
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: linear-gradient(135deg, #3F4B3B, #44633F);
+  background: linear-gradient(135deg, #1f2937, #374151);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #5CAB7D, #5A9367);
+  background: linear-gradient(135deg, #10b981, #059669);
   border-radius: 6px;
-  border: 2px solid #3F4B3B;
+  border: 2px solid #1f2937;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #6fb587, #6ba575);
+  background: linear-gradient(135deg, #34d399, #10b981);
 }
 
 /* Delay utilities for staggered animations */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-500 { animation-delay: 0.5s; }
-.delay-700 { animation-delay: 0.7s; }
-.delay-1000 { animation-delay: 1s; }
+.delay-100 {
+  animation-delay: 0.1s;
+}
 
-/* Custom green hover effects */
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
+/* Green hover effects */
 .hover-lift {
   transition: all 0.3s ease;
 }
 
 .hover-lift:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(92, 171, 125, 0.15);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15);
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(92, 171, 125, 0.6);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
 }
 
-/* Custom green button styles */
+/* Green button styles */
 .btn-gradient {
-  background: linear-gradient(135deg, #5CAB7D, #5A9367);
+  background: linear-gradient(135deg, #10b981, #059669);
   transition: all 0.3s ease;
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(135deg, #6fb587, #6ba575);
+  background: linear-gradient(135deg, #34d399, #10b981);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(92, 171, 125, 0.4);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
 }
 
-/* Custom green loading animation */
+/* Green loading animation */
 .loading-shimmer {
-  background: linear-gradient(90deg, #44633F 25%, #5CAB7D 50%, #44633F 75%);
+  background: linear-gradient(90deg, #374151 25%, #10b981 50%, #374151 75%);
   background-size: 200px 100%;
   animation: shimmer 1.5s infinite;
 }
 
-/* Particle system with custom green theme */
+/* Particle system with green theme */
 .particles {
   position: absolute;
   top: 0;
@@ -399,22 +445,22 @@ html {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: radial-gradient(circle, #5CAB7D, transparent);
+  background: radial-gradient(circle, #10b981, transparent);
   border-radius: 50%;
   animation: float 8s ease-in-out infinite;
 }
 
-/* Custom green text reveal animation */
+/* Green text reveal animation */
 @keyframes textReveal {
   0% {
     opacity: 0;
     transform: translateY(20px);
-    color: #44633F;
+    color: #374151;
   }
   100% {
     opacity: 1;
     transform: translateY(0);
-    color: #5CAB7D;
+    color: #10b981;
   }
 }
 
@@ -422,13 +468,13 @@ html {
   animation: textReveal 0.8s ease-out forwards;
 }
 
-/* Custom green neon effect */
+/* Green neon effect */
 .neon-green {
   text-shadow: 
-    0 0 5px #5CAB7D,
-    0 0 10px #5CAB7D,
-    0 0 15px #5CAB7D,
-    0 0 20px #5CAB7D;
+    0 0 5px #10b981,
+    0 0 10px #10b981,
+    0 0 15px #10b981,
+    0 0 20px #10b981;
 }
 
 /* Breathing animation for important elements */
@@ -447,15 +493,15 @@ html {
   animation: breathe 4s ease-in-out infinite;
 }
 
-/* Custom green border gradient animation */
+/* Green border gradient animation */
 @keyframes borderGlow {
   0%, 100% {
-    border-color: #5CAB7D;
-    box-shadow: 0 0 10px rgba(92, 171, 125, 0.3);
+    border-color: #10b981;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
   }
   50% {
-    border-color: #6fb587;
-    box-shadow: 0 0 20px rgba(111, 181, 135, 0.5);
+    border-color: #34d399;
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.5);
   }
 }
 
@@ -463,53 +509,34 @@ html {
   animation: borderGlow 2s ease-in-out infinite;
 }
 
-/* Custom green focus states */
+/* Green focus states */
 .focus-green:focus {
   outline: none;
-  border-color: #5CAB7D;
-  box-shadow: 0 0 0 3px rgba(92, 171, 125, 0.1);
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
 }
 
-/* Custom green selection */
+/* Green selection */
 ::selection {
-  background-color: rgba(92, 171, 125, 0.3);
+  background-color: rgba(16, 185, 129, 0.3);
   color: #ffffff;
 }
 
 ::-moz-selection {
-  background-color: rgba(92, 171, 125, 0.3);
+  background-color: rgba(16, 185, 129, 0.3);
   color: #ffffff;
 }
 
 /* Enhanced card hover effects */
 .card-hover {
   transition: all 0.3s ease;
-  border: 1px solid rgba(92, 171, 125, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .card-hover:hover {
   transform: translateY(-5px) scale(1.02);
-  border-color: rgba(92, 171, 125, 0.5);
+  border-color: rgba(16, 185, 129, 0.5);
   box-shadow: 
-    0 10px 30px rgba(92, 171, 125, 0.1),
-    0 0 20px rgba(92, 171, 125, 0.1);
+    0 10px 30px rgba(16, 185, 129, 0.1),
+    0 0 20px rgba(16, 185, 129, 0.1);
 }
-
-/* Utility classes for your custom colors */
-.bg-feldgrau { background-color: #3F4B3B; }
-.bg-hunter { background-color: #44633F; }
-.bg-sea { background-color: #5A9367; }
-.bg-mint { background-color: #5CAB7D; }
-.bg-mint-light { background-color: #DDFFF7; }
-
-.text-feldgrau { color: #3F4B3B; }
-.text-hunter { color: #44633F; }
-.text-sea { color: #5A9367; }
-.text-mint { color: #5CAB7D; }
-.text-mint-light { color: #DDFFF7; }
-
-.border-feldgrau { border-color: #3F4B3B; }
-.border-hunter { border-color: #44633F; }
-.border-sea { border-color: #5A9367; }
-.border-mint { border-color: #5CAB7D; }
-.border-mint-light { border-color: #DDFFF7; }
