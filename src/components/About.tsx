@@ -3,15 +3,15 @@ import { Code, Coffee, Heart, Trophy } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+    <section id="about" className="py-20 bg-gradient-to-b from-feldgrau-900 to-feldgrau-800">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4 bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-white mb-4 bg-gradient-to-r from-mint-400 to-sea-400 bg-clip-text text-transparent">
               About Me
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-mint-500 to-sea-500 mx-auto rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -44,18 +44,18 @@ const About = () => {
                 </p>
               </div>
 
-              {/* Stats */}
+              {/* Stats with custom green theme */}
               <div className="grid grid-cols-3 gap-4 mt-8">
-                <div className="text-center p-4 bg-emerald-900/30 backdrop-blur-sm rounded-lg border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300">
-                  <div className="text-2xl font-bold text-emerald-400 mb-2">3.758</div>
+                <div className="text-center p-4 bg-hunter-900/30 backdrop-blur-sm rounded-lg border border-hunter-700/30 hover:border-mint-600/50 transition-all duration-300">
+                  <div className="text-2xl font-bold text-mint-400 mb-2">3.758</div>
                   <div className="text-sm text-slate-400">GPA</div>
                 </div>
-                <div className="text-center p-4 bg-emerald-900/30 backdrop-blur-sm rounded-lg border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300">
-                  <div className="text-2xl font-bold text-emerald-400 mb-2">6+</div>
+                <div className="text-center p-4 bg-hunter-900/30 backdrop-blur-sm rounded-lg border border-hunter-700/30 hover:border-mint-600/50 transition-all duration-300">
+                  <div className="text-2xl font-bold text-mint-400 mb-2">6+</div>
                   <div className="text-sm text-slate-400">Students Tutored</div>
                 </div>
-                <div className="text-center p-4 bg-emerald-900/30 backdrop-blur-sm rounded-lg border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300">
-                  <div className="text-2xl font-bold text-emerald-400 mb-2">40+</div>
+                <div className="text-center p-4 bg-hunter-900/30 backdrop-blur-sm rounded-lg border border-hunter-700/30 hover:border-mint-600/50 transition-all duration-300">
+                  <div className="text-2xl font-bold text-mint-400 mb-2">40+</div>
                   <div className="text-sm text-slate-400">Club Members Led</div>
                 </div>
               </div>
@@ -63,9 +63,9 @@ const About = () => {
 
             {/* Right Column - Image & Highlights */}
             <div className="space-y-8 animate-slide-in-right">
-              {/* Profile Image with green gradient */}
-              <div className="w-full h-80 bg-gradient-to-br from-emerald-900/50 to-green-900/50 rounded-2xl flex items-center justify-center relative overflow-hidden border border-emerald-700/30">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-green-500/10"></div>
+              {/* Profile Image with custom green gradient */}
+              <div className="w-full h-80 bg-gradient-to-br from-hunter-900/50 to-sea-900/50 rounded-2xl flex items-center justify-center relative overflow-hidden border border-hunter-700/30">
+                <div className="absolute inset-0 bg-gradient-to-br from-mint-500/10 to-sea-500/10"></div>
                 <img 
                   src="/images/about/about-photo.jpg" 
                   alt="Weiyi Kong"
@@ -76,14 +76,14 @@ const About = () => {
                   }}
                 />
                 {/* Fallback */}
-                <div className="hidden text-6xl text-emerald-400">🏆</div>
+                <div className="hidden text-6xl text-mint-400">🏆</div>
               </div>
 
-              {/* Highlights */}
+              {/* Highlights with custom green theme */}
               <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300 group">
-                  <div className="p-2 bg-emerald-900/50 rounded-full group-hover:bg-emerald-800/50 transition-colors duration-300">
-                    <Code className="text-emerald-400" size={20} />
+                <div className="flex items-center gap-4 p-4 bg-feldgrau-800/50 backdrop-blur-sm rounded-lg border border-hunter-700/30 hover:border-mint-600/50 transition-all duration-300 group">
+                  <div className="p-2 bg-hunter-900/50 rounded-full group-hover:bg-mint-800/50 transition-colors duration-300">
+                    <Code className="text-mint-400" size={20} />
                   </div>
                   <div>
                     <div className="font-semibold text-white">Full Stack Developer</div>
@@ -91,9 +91,9 @@ const About = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300 group">
-                  <div className="p-2 bg-green-900/50 rounded-full group-hover:bg-green-800/50 transition-colors duration-300">
-                    <Coffee className="text-green-400" size={20} />
+                <div className="flex items-center gap-4 p-4 bg-feldgrau-800/50 backdrop-blur-sm rounded-lg border border-hunter-700/30 hover:border-mint-600/50 transition-all duration-300 group">
+                  <div className="p-2 bg-sea-900/50 rounded-full group-hover:bg-sea-800/50 transition-colors duration-300">
+                    <Coffee className="text-sea-400" size={20} />
                   </div>
                   <div>
                     <div className="font-semibold text-white">Peer Tutor</div>
@@ -101,9 +101,9 @@ const About = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 bg-slate-800/50 backdrop-blur-sm rounded-lg border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300 group">
-                  <div className="p-2 bg-teal-900/50 rounded-full group-hover:bg-teal-800/50 transition-colors duration-300">
-                    <Trophy className="text-teal-400" size={20} />
+                <div className="flex items-center gap-4 p-4 bg-feldgrau-800/50 backdrop-blur-sm rounded-lg border border-hunter-700/30 hover:border-mint-600/50 transition-all duration-300 group">
+                  <div className="p-2 bg-hunter-900/50 rounded-full group-hover:bg-hunter-800/50 transition-colors duration-300">
+                    <Trophy className="text-hunter-400" size={20} />
                   </div>
                   <div>
                     <div className="font-semibold text-white">Club President</div>
