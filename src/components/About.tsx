@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Coffee, Heart, Trophy } from 'lucide-react';
+import { Code, Coffee, Trophy } from 'lucide-react';
 
 const About = () => {
   return (
@@ -16,7 +16,7 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text */}
-            <div className="animate-slide-in-left">
+            <div>
               <h3 className="text-2xl font-semibold text-white mb-6">
                 Hello! I'm Weiyi (Oscar), a passionate Computer Science student.
               </h3>
@@ -43,27 +43,11 @@ const About = () => {
                   teamwork skills.
                 </p>
               </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-8">
-                <div className="text-center p-4 bg-emerald-900/30 backdrop-blur-sm rounded-lg border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300">
-                  <div className="text-2xl font-bold text-emerald-400 mb-2">3.758</div>
-                  <div className="text-sm text-slate-400">GPA</div>
-                </div>
-                <div className="text-center p-4 bg-emerald-900/30 backdrop-blur-sm rounded-lg border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300">
-                  <div className="text-2xl font-bold text-emerald-400 mb-2">6+</div>
-                  <div className="text-sm text-slate-400">Students Tutored</div>
-                </div>
-                <div className="text-center p-4 bg-emerald-900/30 backdrop-blur-sm rounded-lg border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300">
-                  <div className="text-2xl font-bold text-emerald-400 mb-2">40+</div>
-                  <div className="text-sm text-slate-400">Club Members Led</div>
-                </div>
-              </div>
             </div>
 
             {/* Right Column - Image & Highlights */}
-            <div className="space-y-8 animate-slide-in-right">
-              {/* Profile Image with green gradient */}
+            <div className="space-y-8">
+              {/* Profile Image */}
               <div className="w-full h-80 bg-gradient-to-br from-emerald-900/50 to-green-900/50 rounded-2xl flex items-center justify-center relative overflow-hidden border border-emerald-700/30">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-green-500/10"></div>
                 <img 
@@ -106,8 +90,8 @@ const About = () => {
                     <Trophy className="text-teal-400" size={20} />
                   </div>
                   <div>
-                    <div className="font-semibold text-white">Club President</div>
-                    <div className="text-sm text-slate-400">Leading Northeastern Squash Club & coach</div>
+                    <div className="font-semibold text-white">Squash Coach</div>
+                    <div className="text-sm text-slate-400">Coached 70+ sessions & leading club development</div>
                   </div>
                 </div>
               </div>

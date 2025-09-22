@@ -55,16 +55,12 @@ const Skills = () => {
               Skills & Technologies
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 mx-auto rounded-full"></div>
-            <p className="text-slate-300 mt-4 max-w-2xl mx-auto">
-              Here are the technologies and tools I work with to bring ideas to life, 
-              backed by strong academic foundation and hands-on experience.
-            </p>
           </div>
 
           {/* Skills Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {skillCategories.map((category, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300 animate-slide-in-up card-hover" style={{animationDelay: `${index * 0.2}s`}}>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-6 text-center">
                   {category.title}
                 </h3>
@@ -79,11 +75,8 @@ const Skills = () => {
                       
                       <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
                         <div 
-                          className="h-full bg-gradient-to-r from-emerald-500 to-green-500 rounded-full transition-all duration-1000 ease-out animate-shimmer"
-                          style={{ 
-                            width: `${skill.level}%`,
-                            animationDelay: `${(index * 0.2) + (skillIndex * 0.1)}s`
-                          }}
+                          className="h-full bg-gradient-to-r from-emerald-500 to-green-500 rounded-full transition-all duration-1000 ease-out"
+                          style={{ width: `${skill.level}%` }}
                         ></div>
                       </div>
                     </div>
@@ -93,17 +86,13 @@ const Skills = () => {
             ))}
           </div>
 
-          {/* Academic Foundation */}
-          <div className="mb-16 animate-fade-in">
+          {/* Academic Foundation - Simplified without redundant GPA */}
+          <div className="mb-16">
             <h3 className="text-2xl font-bold text-white mb-8 text-center">Academic Foundation</h3>
             <div className="bg-gradient-to-r from-slate-800/70 to-emerald-900/30 p-8 rounded-xl backdrop-blur-sm border border-emerald-700/30">
               <div className="text-center mb-6">
-                <div className="inline-flex items-center gap-4 mb-4">
-                  <div className="text-3xl font-bold text-emerald-400 animate-pulse">3.758</div>
-                  <div className="text-slate-300">GPA at Northeastern University</div>
-                </div>
-                <div className="text-slate-300 mb-4">Bachelor of Science in Computer Science • Graduation: May 2028</div>
-                <div className="text-sm text-emerald-400 font-medium">Honor Roll: Fall 2024, Spring 2025</div>
+                <div className="text-slate-300 mb-4">Bachelor of Science in Computer Science • Northeastern University</div>
+                <div className="text-slate-300 mb-4">Graduation: May 2028 • Honor Roll: Fall 2024, Spring 2025</div>
               </div>
               
               <div>
@@ -112,7 +101,7 @@ const Skills = () => {
                   {academicCourses.map((course, index) => (
                     <span 
                       key={index}
-                      className="px-4 py-2 bg-slate-800/50 text-slate-300 rounded-full text-sm font-medium border border-emerald-700/30 hover:border-emerald-600/50 hover:bg-emerald-900/30 transition-all duration-300 transform hover:scale-105"
+                      className="px-4 py-2 bg-slate-800/50 text-slate-300 rounded-full text-sm font-medium border border-emerald-700/30 hover:border-emerald-600/50 hover:bg-emerald-900/30 transition-all duration-300"
                     >
                       {course}
                     </span>
@@ -123,7 +112,7 @@ const Skills = () => {
           </div>
 
           {/* Additional Skills & Interests */}
-          <div className="text-center mb-16">
+          <div className="text-center">
             <h3 className="text-xl font-semibold text-white mb-6">Additional Skills & Interests</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {[
@@ -133,28 +122,11 @@ const Skills = () => {
               ].map((skill, index) => (
                 <span 
                   key={index} 
-                  className="px-4 py-2 bg-emerald-900/30 text-emerald-300 rounded-full text-sm font-medium hover:bg-emerald-800/50 hover:text-emerald-200 transition-all duration-300 transform hover:scale-105 border border-emerald-700/30 hover:border-emerald-600/50"
+                  className="px-4 py-2 bg-emerald-900/30 text-emerald-300 rounded-full text-sm font-medium hover:bg-emerald-800/50 hover:text-emerald-200 transition-all duration-300 border border-emerald-700/30 hover:border-emerald-600/50"
                 >
                   {skill}
                 </span>
               ))}
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-slate-800/70 to-emerald-900/50 text-white p-8 rounded-xl backdrop-blur-sm border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300">
-              <h3 className="text-xl font-bold mb-4">Ready to Collaborate?</h3>
-              <p className="text-slate-300 mb-6">
-                I'm always excited to work on new projects and learn new technologies. 
-                Let's build something amazing together!
-              </p>
-              <a 
-                href="#contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-lg hover:from-emerald-700 hover:to-green-700 transition-all duration-300 font-semibold transform hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25"
-              >
-                Get In Touch
-              </a>
             </div>
           </div>
         </div>
