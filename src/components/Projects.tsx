@@ -179,3 +179,9 @@ const Projects = () => {
             </a>
           </div>
         </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
