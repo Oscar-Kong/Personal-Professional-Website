@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './index.html', 
-    './src/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{vue,js,ts,jsx,tsx}'
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -21,6 +20,7 @@ export default {
     },
   },
   plugins: [],
+  
   safelist: [
     'animate-fade-in',
     'animate-bounce', 
@@ -31,7 +31,5 @@ export default {
     'ease-out',
     'transform',
     'hover:scale-105',
-    'hover:bg-blue-700',
-    'hover:text-white'
   ]
 };
