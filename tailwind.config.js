@@ -21,6 +21,10 @@ export default {
         'typewriter': 'typewriter 3s steps(40, end), blink 1s step-end infinite',
         'shimmer': 'shimmer 1.5s infinite',
         'text-reveal': 'textReveal 0.8s ease-out forwards',
+        'matrix-rain': 'matrixRain 3s linear infinite',
+        'wave': 'wave 2s ease-in-out infinite',
+        'breathe': 'breathe 4s ease-in-out infinite',
+        'border-glow': 'borderGlow 2s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -48,8 +52,8 @@ export default {
           '100%': { backgroundPosition: '0% 50%' },
         },
         glow: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
-          '50%': { boxShadow: '0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(147, 51, 234, 0.6)' },
+          '0%, 100%': { boxShadow: '0 0 20px rgba(16, 185, 129, 0.5)' },
+          '50%': { boxShadow: '0 0 40px rgba(16, 185, 129, 0.8), 0 0 60px rgba(52, 211, 153, 0.6)' },
         },
         slideInLeft: {
           '0%': { opacity: '0', transform: 'translateX(-50px)' },
@@ -77,43 +81,118 @@ export default {
         },
         blink: {
           '0%, 50%': { borderColor: 'transparent' },
-          '51%, 100%': { borderColor: '#3b82f6' },
+          '51%, 100%': { borderColor: '#10b981' },
         },
         shimmer: {
           '0%': { backgroundPosition: '-200px 0' },
           '100%': { backgroundPosition: 'calc(200px + 100%) 0' },
         },
         textReveal: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          '0%': { opacity: '0', transform: 'translateY(20px)', color: '#374151' },
+          '100%': { opacity: '1', transform: 'translateY(0)', color: '#10b981' },
+        },
+        matrixRain: {
+          '0%': { transform: 'translateY(-100vh)', opacity: '1' },
+          '100%': { transform: 'translateY(100vh)', opacity: '0' },
+        },
+        wave: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(5deg)' },
+          '75%': { transform: 'rotate(-5deg)' },
+        },
+        breathe: {
+          '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+          '50%': { transform: 'scale(1.02)', opacity: '0.9' },
+        },
+        borderGlow: {
+          '0%, 100%': { 
+            borderColor: '#10b981',
+            boxShadow: '0 0 10px rgba(16, 185, 129, 0.3)'
+          },
+          '50%': { 
+            borderColor: '#34d399',
+            boxShadow: '0 0 20px rgba(52, 211, 153, 0.5)'
+          },
         },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'grid-pattern': 'linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px)',
       },
       backdropBlur: {
         xs: '2px',
       },
       colors: {
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+          50: '#ecfdf5',
+          100: '#d1fae5',
+          200: '#a7f3d0',
+          300: '#6ee7b7',
+          400: '#34d399',
+          500: '#10b981',
+          600: '#059669',
+          700: '#047857',
+          800: '#065f46',
+          900: '#064e3b',
         },
+        emerald: {
+          50: '#ecfdf5',
+          100: '#d1fae5',
+          200: '#a7f3d0',
+          300: '#6ee7b7',
+          400: '#34d399',
+          500: '#10b981',
+          600: '#059669',
+          700: '#047857',
+          800: '#065f46',
+          900: '#064e3b',
+        },
+        forest: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          700: '#15803d',
+          800: '#166534',
+          900: '#14532d',
+        },
+        sage: {
+          50: '#f6f7f6',
+          100: '#e3e7e3',
+          200: '#c7d0c7',
+          300: '#a3b3a3',
+          400: '#7a917a',
+          500: '#5c7a5c',
+          600: '#4a6349',
+          700: '#3d503d',
+          800: '#344234',
+          900: '#2d372d',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+      },
+      spacing: {
+        '18': '4.5rem',
+        '88': '22rem',
+        '128': '32rem',
+      },
+      boxShadow: {
+        'green-glow': '0 0 20px rgba(16, 185, 129, 0.3)',
+        'green-glow-lg': '0 0 40px rgba(16, 185, 129, 0.4)',
+        'emerald-glow': '0 0 20px rgba(52, 211, 153, 0.3)',
+        'emerald-glow-lg': '0 0 40px rgba(52, 211, 153, 0.4)',
       },
     },
   },
   plugins: [],
   
   safelist: [
+    // Animations
     'animate-fade-in',
     'animate-bounce', 
     'animate-pulse',
@@ -128,6 +207,12 @@ export default {
     'animate-typewriter',
     'animate-shimmer',
     'animate-text-reveal',
+    'animate-matrix-rain',
+    'animate-wave',
+    'animate-breathe',
+    'animate-border-glow',
+    
+    // Transitions
     'transition-all',
     'duration-300',
     'duration-500',
@@ -135,17 +220,23 @@ export default {
     'duration-1000',
     'ease-out',
     'ease-in-out',
+    
+    // Transforms
     'transform',
     'hover:scale-105',
     'hover:scale-110',
     'hover:rotate-3',
     'hover:-rotate-3',
+    
+    // Delays
     'delay-100',
     'delay-200',
     'delay-300',
     'delay-500',
     'delay-700',
     'delay-1000',
+    
+    // Custom classes
     'glass',
     'glass-dark',
     'gradient-text',
@@ -154,5 +245,24 @@ export default {
     'btn-gradient',
     'loading-shimmer',
     'text-reveal',
+    'neon-green',
+    'card-hover',
+    'focus-green',
+    'bg-grid-pattern',
+    
+    // Green color variations
+    'text-emerald-400',
+    'text-emerald-500',
+    'text-emerald-600',
+    'bg-emerald-900/30',
+    'bg-emerald-800/50',
+    'border-emerald-700/30',
+    'border-emerald-600/50',
+    'from-emerald-400',
+    'to-green-400',
+    'from-emerald-600',
+    'to-green-600',
+    'shadow-emerald-500/25',
+    'hover:shadow-emerald-500/25',
   ]
 };
