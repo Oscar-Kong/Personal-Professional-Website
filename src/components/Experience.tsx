@@ -71,14 +71,16 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-slate-50">
+    <section id="experience" className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Experience</h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
-            <p className="text-slate-600 mt-4 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4 bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">
+              Experience
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 mx-auto rounded-full"></div>
+            <p className="text-slate-300 mt-4 max-w-2xl mx-auto">
               Here's a timeline of my professional journey and the impact I've made.
             </p>
           </div>
@@ -86,50 +88,50 @@ const Experience = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-blue-200"></div>
+            <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500 to-green-500"></div>
 
             {/* Experience Items */}
             <div className="space-y-12">
               {experiences.map((exp, index) => (
-                <div key={index} className="relative">
+                <div key={index} className="relative animate-fade-in" style={{animationDelay: `${index * 0.2}s`}}>
                   {/* Timeline Dot */}
-                  <div className="absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
+                  <div className="absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full border-4 border-slate-800 shadow-lg animate-pulse" style={{animationDelay: `${index * 0.3}s`}}></div>
 
                   {/* Content */}
                   <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-12' : 'md:ml-1/2 md:pl-12'}`}>
-                    <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300 hover:bg-slate-800/70 card-hover group">
                       {/* Header */}
                       <div className="mb-4">
-                        <h3 className="text-xl font-bold text-slate-900">{exp.title}</h3>
-                        <div className="text-blue-600 font-semibold flex items-center gap-1">
+                        <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300">{exp.title}</h3>
+                        <div className="text-emerald-400 font-semibold flex items-center gap-1">
                           {exp.company}
-                          <ExternalLink size={16} />
+                          <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </div>
                         
-                        <div className="flex flex-wrap gap-4 mt-2 text-sm text-slate-500">
+                        <div className="flex flex-wrap gap-4 mt-2 text-sm text-slate-400">
                           <div className="flex items-center gap-1">
-                            <Calendar size={16} />
+                            <Calendar size={16} className="text-emerald-400" />
                             {exp.period}
                           </div>
                           <div className="flex items-center gap-1">
-                            <MapPin size={16} />
+                            <MapPin size={16} className="text-emerald-400" />
                             {exp.location}
                           </div>
                         </div>
                       </div>
 
                       {/* Description */}
-                      <p className="text-slate-600 mb-4 leading-relaxed">
+                      <p className="text-slate-300 mb-4 leading-relaxed">
                         {exp.description}
                       </p>
 
                       {/* Achievements */}
                       <div>
-                        <h4 className="font-semibold text-slate-900 mb-2">Key Achievements:</h4>
+                        <h4 className="font-semibold text-white mb-2">Key Achievements:</h4>
                         <ul className="space-y-1">
                           {exp.achievements.map((achievement, i) => (
-                            <li key={i} className="text-slate-600 text-sm flex items-start gap-2">
-                              <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></span>
+                            <li key={i} className="text-slate-300 text-sm flex items-start gap-2">
+                              <span className="w-1.5 h-1.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full mt-2 flex-shrink-0"></span>
                               {achievement}
                             </li>
                           ))}
@@ -139,6 +141,23 @@ const Experience = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-emerald-900/30 to-green-900/30 backdrop-blur-sm p-8 rounded-xl border border-emerald-700/30">
+              <h3 className="text-xl font-bold text-white mb-4">Want to Learn More?</h3>
+              <p className="text-slate-300 mb-6">
+                I'm always open to discussing my experiences and potential opportunities.
+              </p>
+              <a 
+                href="#contact"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-lg hover:from-emerald-700 hover:to-green-700 transition-all duration-300 font-semibold transform hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25"
+              >
+                Let's Connect
+                <ExternalLink size={16} className="ml-2" />
+              </a>
             </div>
           </div>
         </div>

@@ -10,9 +10,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
-    // Reset form
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -48,7 +46,7 @@ const Contact = () => {
     {
       icon: <Github className="w-5 h-5" />,
       name: "GitHub",
-      url: "https://github.com/Oscar-Kong"
+      url: "https://github.com/WeiyiKong"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
@@ -58,26 +56,26 @@ const Contact = () => {
     {
       icon: <ExternalLink className="w-5 h-5" />,
       name: "Recreon Startup",
-      url: "#" // You can update this with Recreon website when available
+      url: "#"
     }
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-green-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-white mb-4 bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">
               Get In Touch
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 mx-auto rounded-full"></div>
             <p className="text-slate-300 mt-4 max-w-2xl mx-auto">
               I'm always interested in new opportunities, interesting projects, and collaborations. 
               Whether you want to discuss Recreon, explore potential partnerships, or just say hello!
@@ -86,21 +84,21 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
-            <div>
+            <div className="animate-slide-in-left">
               <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
               
               <div className="space-y-6 mb-8">
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-center gap-4 p-4 bg-slate-800/50 rounded-lg backdrop-blur-sm border border-slate-700 hover:border-slate-600 transition-all duration-300 hover:bg-slate-800/70">
-                    <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg flex-shrink-0">
+                  <div key={index} className="flex items-center gap-4 p-4 bg-slate-800/50 rounded-lg backdrop-blur-sm border border-emerald-700/30 hover:border-emerald-600/50 transition-all duration-300 hover:bg-slate-800/70 group">
+                    <div className="p-3 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-lg flex-shrink-0 group-hover:from-emerald-500 group-hover:to-green-500 transition-all duration-300">
                       {info.icon}
                     </div>
                     <div>
-                      <div className="text-slate-300 text-sm">{info.title}</div>
+                      <div className="text-slate-400 text-sm">{info.title}</div>
                       {info.link ? (
                         <a 
                           href={info.link}
-                          className="text-white font-medium hover:text-blue-400 transition-colors duration-300"
+                          className="text-white font-medium hover:text-emerald-400 transition-colors duration-300"
                         >
                           {info.value}
                         </a>
@@ -113,7 +111,7 @@ const Contact = () => {
               </div>
 
               {/* Current Status */}
-              <div className="mb-8 p-6 bg-gradient-to-r from-slate-800/70 to-slate-700/70 rounded-lg backdrop-blur-sm border border-slate-600">
+              <div className="mb-8 p-6 bg-gradient-to-r from-slate-800/70 to-emerald-900/30 rounded-lg backdrop-blur-sm border border-emerald-700/30">
                 <h4 className="text-lg font-semibold text-white mb-2">Current Status</h4>
                 <p className="text-slate-300 text-sm mb-2">
                   🎓 Computer Science Student at Northeastern University
@@ -136,7 +134,7 @@ const Contact = () => {
                       href={social.url}
                       target={social.url !== "#" ? "_blank" : undefined}
                       rel={social.url !== "#" ? "noopener noreferrer" : undefined}
-                      className="p-3 bg-slate-800/50 text-slate-300 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white transition-all duration-300 transform hover:scale-105 backdrop-blur-sm border border-slate-700 hover:border-transparent"
+                      className="p-3 bg-slate-800/50 text-emerald-300 rounded-lg hover:bg-gradient-to-r hover:from-emerald-600 hover:to-green-600 hover:text-white transition-all duration-300 transform hover:scale-105 backdrop-blur-sm border border-emerald-700/30 hover:border-transparent"
                       title={social.name}
                     >
                       {social.icon}
@@ -147,7 +145,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-slate-700">
+            <div className="bg-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-emerald-700/30 animate-slide-in-right">
               <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -162,7 +160,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm"
                     placeholder="John Doe"
                   />
                 </div>
@@ -178,7 +176,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -194,14 +192,14 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none backdrop-blur-sm"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 resize-none backdrop-blur-sm"
                     placeholder="Tell me about your project, ask about Recreon, or just say hello!"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2 font-semibold transform hover:scale-105"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-lg hover:from-emerald-700 hover:to-green-700 transition-all duration-300 flex items-center justify-center gap-2 font-semibold transform hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25"
                 >
                   <Send className="w-4 h-4" />
                   Send Message
