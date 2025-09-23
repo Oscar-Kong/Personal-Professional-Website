@@ -25,7 +25,7 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      value: "kong.weiyi@northeastern.edu,oscarkong05@gmail.com",
+      value: "kong.weiyi@northeastern.edu\noscarkong05@gmail.com",
       link: "mailto:kong.weiyi@northeastern.edu",
     },
     {

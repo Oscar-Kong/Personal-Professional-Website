@@ -18,7 +18,7 @@ const About = () => {
             {/* Left Column - Text */}
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">
-                Hello! I'm Weiyi (Oscar), a passionate Computer Science student.
+                Hello! I'm Oscar, a passionate Computer Science student.
               </h3>
               
               <div className="space-y-4 text-slate-300 leading-relaxed">
@@ -51,7 +51,7 @@ const About = () => {
               <div className="w-full h-80 bg-gradient-to-br from-emerald-900/50 to-green-900/50 rounded-2xl flex items-center justify-center relative overflow-hidden border border-emerald-700/30">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-green-500/10"></div>
                 <img 
-                  src="/images/about/about-photo.jpg" 
+                  src="/public/images/profile/profile-photo.jpg" 
                   alt="Weiyi Kong"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 rounded-2xl"
                   onError={(e) => {
