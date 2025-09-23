@@ -43,7 +43,7 @@ const Projects = () => {
     {
       title: "NEU Squash Hub",
       description: "A comprehensive platform for the Northeastern Squash Club to manage memberships, schedule matches, track player progress, and coordinate events. Built to support the club's growth toward establishing a varsity program.",
-      image: "/images/projects/squash-hub-screenshot.jpg",
+      image: "/images/projects/squashhub-screenshot.jpg",
       technologies: ["React", "Node.js", "PostgreSQL", "Express.js", "JavaScript"],
       liveUrl: "#",
       githubUrl: "#",
