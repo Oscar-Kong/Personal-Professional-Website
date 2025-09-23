@@ -18,8 +18,8 @@ function App() {
         </div>
         <About />
         <Experience />
-        <Skills />
         <Projects />
+        <Skills />
         <Contact />
       </main>
       <Footer />
