@@ -23,10 +23,10 @@ const About = () => {
               
               <div className="space-y-4 text-slate-300 leading-relaxed">
                 <p>
-                  I'm a Computer Science student at Northeastern University with a 3.758 GPA, 
-                  passionate about full-stack development and creating innovative solutions. 
-                  Currently, I'm building Recreon, a startup that connects sports enthusiasts 
-                  and enables local competition.
+                  I'm a Computer Science student at Northeastern University concentrating in 
+                  Artificial Intelligence, passionate about full-stack development and creating 
+                  innovative solutions.Currently, I'm building Recreon, a startup that connects
+                  sports enthusiasts and enables local competition.
                 </p>
                 
                 <p>
@@ -91,7 +91,7 @@ const About = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-white">Squash Coach</div>
-                    <div className="text-sm text-slate-400">Coached 70+ sessions & leading club development</div>
+                    <div className="text-sm text-slate-400">Coached 70+ sessions & leading Northeastern club squash development</div>
                   </div>
                 </div>
               </div>

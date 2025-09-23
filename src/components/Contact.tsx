@@ -26,7 +26,7 @@ const Contact = () => {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
       value: "kong.weiyi@northeastern.edu",
-      link: "mailto:kong.weiyi@northeastern.edu"
+      link: "mailto:kong.weiyi@northeastern.edu, mailto:oscarkong05@gmail.com",
     },
     {
       icon: <Phone className="w-6 h-6" />,
@@ -46,7 +46,7 @@ const Contact = () => {
     {
       icon: <Github className="w-5 h-5" />,
       name: "GitHub",
-      url: "https://github.com/WeiyiKong"
+      url: "https://github.com/Oscar-Kong"
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
@@ -161,7 +161,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm"
-                    placeholder="John Doe"
+                    placeholder="Oscar Kong"
                   />
                 </div>
 
@@ -177,7 +177,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm"
-                    placeholder="john@example.com"
+                    placeholder="oscarkong05@gmail.com"
                   />
                 </div>
 
@@ -193,7 +193,7 @@ const Contact = () => {
                     required
                     rows={5}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 resize-none backdrop-blur-sm"
-                    placeholder="Tell me about your project, ask about Recreon, or just say hello!"
+                    placeholder="Contact me for work oppertunities, ask about Recreon, or just say hello!"
                   ></textarea>
                 </div>
 
