@@ -112,7 +112,7 @@ const Experience = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .animate-in {
           opacity: 1 !important;
           transform: translateY(0) !important;

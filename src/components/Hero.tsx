@@ -85,7 +85,7 @@ const Hero = () => {
         {/* Enhanced Social Links with green theme */}
         <div className="flex gap-6 mb-16">
           <a 
-            href="https://github.com/WeiyiKong" 
+            href="https://github.com/Oscar-Kong" 
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 bg-slate-800/50 text-emerald-300 rounded-full hover:bg-emerald-700/50 hover:text-white transition-all duration-300 transform hover:scale-110 backdrop-blur-sm border border-emerald-700/50 hover:border-emerald-500"

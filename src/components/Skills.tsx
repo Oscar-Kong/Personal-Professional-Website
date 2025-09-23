@@ -93,6 +93,7 @@ const Skills = () => {
               <div className="text-center mb-6">
                 <div className="text-slate-300 mb-4">Bachelor of Science in Computer Science • Northeastern University</div>
                 <div className="text-slate-300 mb-4">Graduation: May 2028 • Honor Roll: Fall 2024, Spring 2025</div>
+                <div className="text-slate-300 mb-4">GPA 3.76/4.00</div>
               </div>
               
               <div>
