@@ -5,12 +5,12 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Removed 'Home' from menuItems
   const menuItems = [
-    { name: 'Home', id: 'hero' },
     { name: 'About', id: 'about' },
     { name: 'Experience', id: 'experience' },
-    { name: 'Skills', id: 'skills' },
     { name: 'Projects', id: 'projects' },
+    { name: 'Skills', id: 'skills' },
     { name: 'Contact', id: 'contact' },
   ];
 
@@ -37,10 +37,13 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo with green theme */}
-          <div className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">
+          {/* Logo with green theme - now clickable to scroll to top */}
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent hover:from-emerald-300 hover:to-green-300 transition-all duration-300"
+          >
             WK
-          </div>
+          </button>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -53,11 +53,6 @@ const Contact = () => {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/weiyi-kong-3a65492a5"
     },
-    {
-      icon: <ExternalLink className="w-5 h-5" />,
-      name: "Recreon Startup",
-      url: "#"
-    }
   ];
 
   return (
