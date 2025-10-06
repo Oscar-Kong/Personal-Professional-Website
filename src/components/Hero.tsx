@@ -1,11 +1,28 @@
 import React from 'react';
 import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 
+
+
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const handleResumeDownload = () => {
+  // Create a temporary link element
+  const link = document.createElement('a');
+  link.href = '/resume/Weiyi_Kong_Resume.pdf';
+  link.download = 'Weiyi_Kong_Resume.pdf';
+  
+  // Trigger the download
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  
+  // Optional: Track the download with analytics
+  console.log('Resume downloaded');
+};
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-green-900 relative overflow-hidden">
@@ -73,9 +90,12 @@ const Hero = () => {
           >
             Get In Touch
           </button>
+  
+        {/* THIS IS THE BUTTON - Just change href="#" to your PDF path */}
           <a 
-            href="#" 
-            className="px-8 py-4 border-2 border-emerald-400 text-emerald-300 rounded-lg font-semibold hover:border-emerald-300 hover:text-emerald-200 hover:bg-emerald-900/30 transform hover:scale-105 transition-all duration-300 flex items-center gap-2 justify-center backdrop-blur-sm"
+            href="/resume/Weiyi_Kong_Resume.pdf"  {/* Change this line */}
+            download="Weiyi_Kong_Resume.pdf"      {/* Add this line */}
+            className="px-8 py-4 border-2 border-emerald-400..."
           >
             <Download size={20} />
             Download Resume
