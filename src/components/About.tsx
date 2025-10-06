@@ -81,7 +81,7 @@ const About = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-white">Peer Tutor</div>
-                    <div className="text-sm text-slate-400">4.88/5.00 rating teaching CS & Math at Knack</div>
+                    <div className="text-sm text-slate-400">4.9/5.00 rating teaching CS & Math at Knack</div>
                   </div>
                 </div>
 

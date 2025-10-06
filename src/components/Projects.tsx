@@ -26,7 +26,7 @@ const Projects = () => {
       image: "/images/projects/recreon-screenshot.jpg",
       technologies: ["React.js", "Expo", "Node.js", "PostgreSQL", "JavaScript"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Oscar-Kong",
       featured: true,
       icon: <Users className="w-6 h-6" />
     },
@@ -36,7 +36,7 @@ const Projects = () => {
       image: "/images/projects/bookstore-screenshot.jpg",
       technologies: ["CSS", "Python", "MongoDB", "Google Auth", "Full Stack"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Oscar-Kong",
       featured: true,
       icon: <BookOpen className="w-6 h-6" />
     },
@@ -46,7 +46,7 @@ const Projects = () => {
       image: "/images/projects/squashhub-screenshot.jpg",
       technologies: ["React", "Node.js", "PostgreSQL", "Express.js", "JavaScript"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Oscar-Kong",
       featured: false,
       icon: <Trophy className="w-6 h-6" />
     },
@@ -56,7 +56,7 @@ const Projects = () => {
       image: "/images/projects/portfolio-screenshot.jpg",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Oscar-Kong",
       featured: false,
       icon: <Code className="w-6 h-6" />
     }
@@ -131,6 +131,8 @@ const Projects = () => {
                     <div className="flex gap-4">
                       <a 
                         href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-lg hover:from-emerald-700 hover:to-green-700 transition-all duration-300 text-sm"
                       >
                         <ExternalLink size={16} />
@@ -138,6 +140,8 @@ const Projects = () => {
                       </a>
                       <a 
                         href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 border border-emerald-600 text-emerald-400 rounded-lg hover:bg-emerald-900/30 transition-all duration-300 text-sm"
                       >
                         <Github size={16} />

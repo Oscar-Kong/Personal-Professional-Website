@@ -23,6 +23,7 @@ const Experience = () => {
     {
       title: "Knack Peer Tutor",
       company: "Knack",
+      companyUrl: "https://www.joinknack.com/", // Add Knack's website URL
       location: "Boston, MA",
       period: "January 2025 - Present",
       description: "Deliver one-on-one and small-group support in Computer Science & Mathematics courses to 6+ students, helping peers master complex theory and practical coding assignments.",
@@ -35,6 +36,7 @@ const Experience = () => {
     {
       title: "Full Time Squash Coach",
       company: "Spirit Squash Club",
+      companyUrl: null, // Set to null if no website available
       location: "Beijing, China", 
       period: "June 2024 - September 2024",
       description: "Worked as full-time squash coach and front desk associate. Coached 70+ individual and group sessions, teaching techniques and strategy to players of all levels.",
@@ -58,7 +60,7 @@ const Experience = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-500 mx-auto rounded-full"></div>
           </div>
 
-          {/* Experience Grid - Same format as friend's site */}
+          {/* Experience Grid */}
           <div className="grid gap-8">
             {experiences.map((exp, index) => (
               <div 
@@ -71,10 +73,23 @@ const Experience = () => {
                     <h3 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors duration-300 mb-2">
                       {exp.title}
                     </h3>
-                    <div className="text-emerald-400 font-semibold text-lg mb-3 flex items-center gap-2">
-                      {exp.company}
-                      <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
+                    
+                    {/* Company Name - Clickable if URL exists */}
+                    {exp.companyUrl ? (
+                      <a 
+                        href={exp.companyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-emerald-400 font-semibold text-lg mb-3 inline-flex items-center gap-2 hover:text-emerald-300 transition-colors duration-300"
+                      >
+                        {exp.company}
+                        <ExternalLink size={16} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </a>
+                    ) : (
+                      <div className="text-emerald-400 font-semibold text-lg mb-3">
+                        {exp.company}
+                      </div>
+                    )}
                   </div>
                   
                   <div className="text-slate-400 text-sm space-y-1">
