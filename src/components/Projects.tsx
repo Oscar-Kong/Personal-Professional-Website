@@ -25,30 +25,10 @@ const Projects = () => {
       description: "A full-stack mobile application that pairs aspiring sports enthusiasts with peers and enables local competition. Built with Expo framework, React.js frontend, and PostgreSQL database with secure authentication and third-party API integrations.",
       image: "/images/projects/recreon-screenshot.jpg",
       technologies: ["React.js", "Expo", "Node.js", "PostgreSQL", "JavaScript"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Oscar-Kong",
+      liveUrl: null,
+      githubUrl: "https://github.com/Oscar-Kong/Recreon",
       featured: true,
       icon: <Users className="w-6 h-6" />
-    },
-    {
-      title: "Northeastern Bookstore Platform",
-      description: "Led a team of 4 developers to create a marketplace connecting Northeastern students for buying and selling used textbooks. Features user profiles, Google authentication, search algorithms, and post management system.",
-      image: "/images/projects/bookstore-screenshot.jpg",
-      technologies: ["CSS", "Python", "MongoDB", "Google Auth", "Full Stack"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Oscar-Kong",
-      featured: true,
-      icon: <BookOpen className="w-6 h-6" />
-    },
-    {
-      title: "NEU Squash Hub",
-      description: "A comprehensive platform for the Northeastern Squash Club to manage memberships, schedule matches, track player progress, and coordinate events. Built to support the club's growth toward establishing a varsity program.",
-      image: "/images/projects/squashhub-screenshot.jpg",
-      technologies: ["React", "Node.js", "PostgreSQL", "Express.js", "JavaScript"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/Oscar-Kong",
-      featured: false,
-      icon: <Trophy className="w-6 h-6" />
     },
     {
       title: "Personal Portfolio Website",
@@ -56,9 +36,29 @@ const Projects = () => {
       image: "/images/projects/portfolio-screenshot.jpg",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
       liveUrl: "#",
-      githubUrl: "https://github.com/Oscar-Kong",
+      githubUrl: "https://github.com/Oscar-Kong/Personal-Professional-Website",
       featured: false,
       icon: <Code className="w-6 h-6" />
+    },
+    {
+      title: "NEU Squash Hub",
+      description: "A comprehensive platform for the Northeastern Squash Club to manage memberships, schedule matches, track player progress, and coordinate events. Built to support the club's growth toward establishing a varsity program.",
+      image: "/images/projects/squashhub-screenshot.jpg",
+      technologies: ["React", "Node.js", "PostgreSQL", "Express.js", "JavaScript"],
+      liveUrl: "https://www.neusquashhub.com/",
+      githubUrl: "https://github.com/Oscar-Kong",
+      featured: false,
+      icon: <Trophy className="w-6 h-6" />
+    },
+    {
+      title: "Northeastern Bookstore Platform",
+      description: "Led a team of 4 developers to create a marketplace connecting Northeastern students for buying and selling used textbooks. Features user profiles, Google authentication, search algorithms, and post management system.",
+      image: "/images/projects/bookstore-screenshot.jpg",
+      technologies: ["CSS", "Python", "MongoDB", "Google Auth", "Full Stack"],
+      liveUrl: null,
+      githubUrl: "https://github.com/Oscar-Kong",
+      featured: true,
+      icon: <BookOpen className="w-6 h-6" />
     }
   ];
 
@@ -129,15 +129,17 @@ const Projects = () => {
 
                     {/* Project Links */}
                     <div className="flex gap-4">
-                      <a 
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-lg hover:from-emerald-700 hover:to-green-700 transition-all duration-300 text-sm"
-                      >
-                        <ExternalLink size={16} />
-                        Live Demo
-                      </a>
+                      {project.liveUrl && (
+                        <a 
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-lg hover:from-emerald-700 hover:to-green-700 transition-all duration-300 text-sm"
+                        >
+                          <ExternalLink size={16} />
+                          Live Demo
+                        </a>
+                      )}
                       <a 
                         href={project.githubUrl}
                         target="_blank"
