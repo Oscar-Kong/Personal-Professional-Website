@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink, Instagram } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, ExternalLink } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +25,7 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      value: "kong.weiyi@northeastern.edu\noscarkong05@gmail.com",
+      value: "kong.weiyi@northeastern.edu",
       link: "mailto:kong.weiyi@northeastern.edu",
     },
     {
@@ -137,8 +137,8 @@ const Contact = () => {
                     
                       key={index}
                       href={social.url}
-                      target={social.url !== "#" ? "_blank" : undefined}
-                      rel={social.url !== "#" ? "noopener noreferrer" : undefined}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="p-3 bg-slate-800/50 text-emerald-300 rounded-lg hover:bg-gradient-to-r hover:from-emerald-600 hover:to-green-600 hover:text-white transition-all duration-300 transform hover:scale-105 backdrop-blur-sm border border-emerald-700/30 hover:border-transparent"
                       title={social.name}
                     >
@@ -198,7 +198,7 @@ const Contact = () => {
                     required
                     rows={5}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 resize-none backdrop-blur-sm"
-                    placeholder="Contact me for work oppertunities, ask about Recreon, or just say hello!"
+                    placeholder="Contact me for work opportunities, ask about Recreon, or just say hello!"
                   ></textarea>
                 </div>
 
