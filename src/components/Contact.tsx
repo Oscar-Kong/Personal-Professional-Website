@@ -114,9 +114,19 @@ const Contact = () => {
                 <p className="text-slate-300 text-sm mb-2">
                   🚀 Building Recreon - Sports Social Platform
                 </p>
-                <p className="text-slate-300 text-sm">
+                <p className="text-slate-300 text-sm mb-4">
                   📚 Available for internships: January - September 2026
                 </p>
+                
+                {/* Resume Download Button */}
+                <a 
+                  href="/resume/Weiyi_Kong_Resume.pdf"
+                  download="Weiyi_Kong_Resume.pdf"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-lg hover:from-emerald-700 hover:to-green-700 transition-all duration-300 text-sm font-semibold"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Download Resume
+                </a>
               </div>
 
               {/* Social Links */}
@@ -124,7 +134,7 @@ const Contact = () => {
                 <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
                 <div className="flex gap-4">
                   {socialLinks.map((social, index) => (
-                    <a
+                    
                       key={index}
                       href={social.url}
                       target={social.url !== "#" ? "_blank" : undefined}
