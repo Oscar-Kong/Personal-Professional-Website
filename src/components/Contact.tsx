@@ -134,7 +134,7 @@ const Contact = () => {
                 <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
                 <div className="flex gap-4">
                   {socialLinks.map((social, index) => (
-                    
+                    <a
                       key={index}
                       href={social.url}
                       target="_blank"
