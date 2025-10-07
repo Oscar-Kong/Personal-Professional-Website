@@ -7,11 +7,35 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
+    setStatus('loading');
+
+    try {
+      const response = await fetch('https://formspree.io/f/mwprnvkw', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        // Reset success message after 5 seconds
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus('idle'), 5000);
+      }
+    } catch (error) {
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -165,7 +189,8 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm"
+                    disabled={status === 'loading'}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Oscar Kong"
                   />
                 </div>
@@ -181,7 +206,8 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm"
+                    disabled={status === 'loading'}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="oscarkong05@gmail.com"
                   />
                 </div>
@@ -196,19 +222,33 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    disabled={status === 'loading'}
                     rows={5}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 resize-none backdrop-blur-sm"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-emerald-700/50 text-white rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300 resize-none backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Contact me for work opportunities, ask about Recreon, or just say hello!"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-lg hover:from-emerald-700 hover:to-green-700 transition-all duration-300 flex items-center justify-center gap-2 font-semibold transform hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25"
+                  disabled={status === 'loading'}
+                  className="w-full px-6 py-3 bg-gradient-to-r from-emerald-600 to-green-600 text-white rounded-lg hover:from-emerald-700 hover:to-green-700 transition-all duration-300 flex items-center justify-center gap-2 font-semibold transform hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   <Send className="w-4 h-4" />
-                  Send Message
+                  {status === 'loading' ? 'Sending...' : 'Send Message'}
                 </button>
+
+                {/* Status Messages */}
+                {status === 'success' && (
+                  <div className="p-4 bg-emerald-500/20 border border-emerald-500/50 rounded-lg text-emerald-300 text-center animate-fade-in">
+                    ✓ Message sent successfully! I'll get back to you soon.
+                  </div>
+                )}
+                {status === 'error' && (
+                  <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-300 text-center animate-fade-in">
+                    ✗ Oops! Something went wrong. Please try again or email me directly.
+                  </div>
+                )}
               </form>
             </div>
           </div>
